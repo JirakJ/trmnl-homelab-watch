@@ -4,7 +4,7 @@ Disk space, service health and backup freshness. A standalone, MIT-licensed TRMN
 local Python collector. This repository contains everything needed to run it;
 no other plugin repository or developer-operated service is required.
 
-[Download](https://github.com/JirakJ/trmnl-homelab-watch/releases/latest) · [Configuration](docs/CONFIGURATION.md) · [Scheduling](docs/RUNNING.md)
+[Download](https://github.com/JirakJ/trmnl-homelab-watch/releases/latest) · [Configuration](docs/CONFIGURATION.md) · [Scheduling](docs/RUNNING.md) · [Shared-screen layouts](docs/MASHUPS.md)
 
 ![Synthetic demo](docs/preview.png)
 
@@ -42,6 +42,12 @@ The installed command `trmnl-homelab-watch` accepts the same options. Without `-
 local JSON is printed. `--demo` uses synthetic data and cannot be pushed. Normal
 source failures preserve the previous screen; always check its update timestamp.
 Failed homelab checks explicitly appear as UNKNOWN/ERROR.
+
+## Share the screen with other plugins
+
+Use Homelab Watch in a half-screen or quarter-screen [TRMNL Mashup](docs/MASHUPS.md).
+Use a quarter for the issue count and first check. A vertical half shows more checks. Always read the update timestamp: a successful screen render does not prove that your services are healthy now.
+The guide includes compatible layouts, suggested companion plugins and account setup.
 
 ## Development and verification
 
