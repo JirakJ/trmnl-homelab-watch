@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trmnl-homelab-watch"
+version = "0.1.0"
+description = "Disk space, service health and backup freshness"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["tzdata==2026.4"]
+
+[project.scripts]
+trmnl-homelab-watch = "trmnl_homelab_watch.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/JirakJ/trmnl-homelab-watch"
+Issues = "https://github.com/JirakJ/trmnl-homelab-watch/issues"
+
+[tool.setuptools.packages.find]
+include = ["trmnl_homelab_watch*"]

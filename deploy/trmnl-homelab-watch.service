@@ -1,0 +1,16 @@
+[Unit]
+Description=Update Homelab Watch on TRMNL
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=trmnl
+WorkingDirectory=/opt/trmnl-homelab-watch
+EnvironmentFile=/opt/trmnl-homelab-watch/private/collector.env
+ExecStart=/opt/trmnl-homelab-watch/.venv/bin/python -m trmnl_homelab_watch --config private/config.json --push
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/trmnl-homelab-watch/private
